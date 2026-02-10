@@ -57,3 +57,4 @@
     when: # and
       - item.item == "frontend"
       - ec2_action == "create"
+      - item.instances[0].public_ip_address is defined
