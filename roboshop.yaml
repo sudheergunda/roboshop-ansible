@@ -54,6 +54,6 @@
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
     loop: "{{ ec2_output.results }}"
-    when:
+    when: # and
       - item.item == "frontend"
       - ec2_action == "create"
